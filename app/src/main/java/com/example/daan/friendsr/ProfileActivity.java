@@ -1,8 +1,10 @@
 package com.example.daan.friendsr;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         Intent intent = getIntent();
-        Friend retrievedFriend = (Friend) intent.getSerializableExtra("clicked_friend");
+        final Friend retrievedFriend = (Friend) intent.getSerializableExtra("clicked_friend");
 
         ImageView image = findViewById(R.id.image_profile);
         TextView text = findViewById(R.id.text_profile);
@@ -29,7 +31,7 @@ public class ProfileActivity extends AppCompatActivity {
         text.setText(retrievedFriend.getName());
         text2.setText(retrievedFriend.getBio());
 
-        SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
+        final SharedPreferences prefs = getSharedPreferences(retrievedFriend.getName(), MODE_PRIVATE);
         RatingBar ratingBar = findViewById(R.id.rating_profile);
         Float rating = prefs.getFloat("rating", 0);
         if (rating != 0) {
@@ -44,7 +46,8 @@ public class ProfileActivity extends AppCompatActivity {
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                SharedPreferences.Editor editor = getSharedPreferences("settings", MODE_PRIVATE).edit();
+                SharedPreferences.Editor editor;
+                editor = prefs.edit();
                 editor.putFloat("rating", rating);
                 editor.apply();
             }

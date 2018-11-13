@@ -1,15 +1,11 @@
 package com.example.daan.friendsr;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -33,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         int resID8 = getResources().getIdentifier("sansa","drawable",getPackageName());
         int resID9 = getResources().getIdentifier("tyrion","drawable",getPackageName());
 
+
         friends.add(new Friend("arya","I'm Arya and I'm foxy",resID));
         friends.add(new Friend("cersei","I'm Cersei and I'm powerfull",resID1));
         friends.add(new Friend("daenerys","I'm Deanerys and I'm good",resID2));
@@ -44,14 +41,17 @@ public class MainActivity extends AppCompatActivity {
         friends.add(new Friend("sansa","I'm mean",resID8));
         friends.add(new Friend("tyrion","I'm wise",resID9));
 
+        //Connecting the adapter to the grid view (friend_pictures) and the list(friends)
         FriendsAdapter adapter = new FriendsAdapter(this, R.layout.grid_item, friends);
         GridView grid = findViewById(R.id.friend_pictures);
         grid.setAdapter(adapter);
 
+        //Connect the GridItemClickListener to the GridView
         grid.setOnItemClickListener(new GridItemClickListener());
 
 
     }
+    // From the item that was actually clicked on, we want to pass his information to the next activity (ProfileActivity).
     private class GridItemClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
