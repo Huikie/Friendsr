@@ -23,9 +23,11 @@ public class ProfileActivity extends AppCompatActivity {
 
         ImageView image = findViewById(R.id.image_profile);
         TextView text = findViewById(R.id.text_profile);
-        text.setText(retrievedFriend.getName());
+        TextView text2 = findViewById(R.id.text2_profile);
         Drawable image_id = getResources().getDrawable(retrievedFriend.getDrawableId(),null);
         image.setImageDrawable(image_id);
+        text.setText(retrievedFriend.getName());
+        text2.setText(retrievedFriend.getBio());
 
         SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
         RatingBar ratingBar = findViewById(R.id.rating_profile);

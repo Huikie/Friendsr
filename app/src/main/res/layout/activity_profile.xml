@@ -8,19 +8,10 @@
     android:padding="12dp"
     tools:context=".ProfileActivity">
 
-    <TextView
-        android:id="@+id/text_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="175dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:padding="12dp" />
-
     <ImageView
         android:id="@+id/image_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="369dp"
+        android:layout_height="329dp"
         android:layout_gravity="center"
         android:layout_weight="2" />
 
@@ -30,5 +21,20 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/text_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/text2_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
 
 </LinearLayout>

@@ -9,17 +9,16 @@
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="wrap_content"
+        android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_weight="1" />
+        android:padding="12dp" />
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="321dp"
+        android:layout_height="195dp"
         android:layout_gravity="center"
-        android:layout_weight="3"
         android:padding="12dp" />
 
 </LinearLayout>

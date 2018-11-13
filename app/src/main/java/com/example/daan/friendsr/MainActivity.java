@@ -26,11 +26,24 @@ public class MainActivity extends AppCompatActivity {
         int resID1 = getResources().getIdentifier("cersei","drawable",getPackageName());
         int resID2 = getResources().getIdentifier("daenerys","drawable",getPackageName());
         int resID3 = getResources().getIdentifier("jaime","drawable",getPackageName());
+        int resID4 = getResources().getIdentifier("jon","drawable",getPackageName());
+        int resID5 = getResources().getIdentifier("jorah","drawable",getPackageName());
+        int resID6 = getResources().getIdentifier("margaery","drawable",getPackageName());
+        int resID7 = getResources().getIdentifier("melisandre","drawable",getPackageName());
+        int resID8 = getResources().getIdentifier("sansa","drawable",getPackageName());
+        int resID9 = getResources().getIdentifier("tyrion","drawable",getPackageName());
 
-        friends.add(new Friend("arya","fat",resID));
-        friends.add(new Friend("cersei","fatt",resID1));
-        friends.add(new Friend("daenerys","fattt",resID2));
-        friends.add(new Friend("jaime","fattt",resID3));
+        friends.add(new Friend("arya","I'm Arya and I'm foxy",resID));
+        friends.add(new Friend("cersei","I'm Cersei and I'm powerfull",resID1));
+        friends.add(new Friend("daenerys","I'm Deanerys and I'm good",resID2));
+        friends.add(new Friend("jaime","I'm Jaime and I'm a soldier",resID3));
+        friends.add(new Friend("jon","I'm Jon and no one knows me",resID4));
+        friends.add(new Friend("jorah","I'm the same as Jon",resID5));
+        friends.add(new Friend("margaery","I'm nice",resID6));
+        friends.add(new Friend("melisandre","I'm nice too",resID7));
+        friends.add(new Friend("sansa","I'm mean",resID8));
+        friends.add(new Friend("tyrion","I'm wise",resID9));
+
         FriendsAdapter adapter = new FriendsAdapter(this, R.layout.grid_item, friends);
         GridView grid = findViewById(R.id.friend_pictures);
         grid.setAdapter(adapter);
