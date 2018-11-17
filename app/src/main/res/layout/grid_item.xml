@@ -12,7 +12,9 @@
         android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="12dp" />
+        android:layout_marginLeft="15dp"
+        android:padding="12dp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/image"
