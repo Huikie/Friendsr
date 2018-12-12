@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 public class Friend implements Serializable {
     private String name, bio;
-    private Float rating;
     private Integer drawableId;
 
     // Constructor
@@ -14,6 +13,7 @@ public class Friend implements Serializable {
         this.drawableId = drawableId;
     }
 
+    // Getters
     public String getName() {
         return name;
     }
@@ -24,10 +24,6 @@ public class Friend implements Serializable {
 
     public Integer getDrawableId() {
         return drawableId;
-    }
-
-    public void setRating(Float rating) {
-        this.rating = rating;
     }
 
 }

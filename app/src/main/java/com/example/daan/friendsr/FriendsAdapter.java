@@ -15,7 +15,7 @@ import android.support.annotation.NonNull;
 public class FriendsAdapter extends ArrayAdapter<Friend> {
     ArrayList<Friend> friends;
 
-    //Constructor
+    // Constructor
     public FriendsAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Friend> objects) {
         super(context, resource, objects);
         friends = objects;
@@ -23,7 +23,7 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
 
     @NonNull
     @Override
-    //Get information from the friends array for every friend in the array and put it in the right views
+    // Get information from the friends array for every friend in the array and put it in the right views.
     public View getView(int position, @NonNull View convertView, @NonNull ViewGroup parent) {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.grid_item, parent, false);
