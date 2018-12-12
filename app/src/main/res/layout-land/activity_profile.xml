@@ -25,7 +25,7 @@
 
         <RatingBar
             android:id="@+id/rating_profile"
-            android:layout_width="255dp"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:padding="12dp" />
