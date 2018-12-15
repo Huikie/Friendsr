@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         // Connect the GridItemClickListener to the GridView
         grid.setOnItemClickListener(new GridItemClickListener());
     }
-    // From the item that was actually clicked on, we want to pass his/her information to the next activity (ProfileActivity).
+    /** From the item that was actually clicked on, we want to pass his/her information to the next activity (ProfileActivity).*/
     private class GridItemClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
