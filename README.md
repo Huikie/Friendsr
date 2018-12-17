@@ -6,7 +6,7 @@ For this app, I've created a social friends app that allows users to view people
 ## Implemented extra's
 - I made rotation of the app user friendly by creating a landscape mode for the friend profile page and by preserving data when the user rotates the screen or closes the app.
 
-This extra's are shown in the section "Screenshots of the app".
+This extra's are shown in the section "Screenshots of the app" (third image).
 
 ## Screenshots of the app
 ![](https://github.com/Huikie/Friendsr/blob/master/doc/friend_list.png)
